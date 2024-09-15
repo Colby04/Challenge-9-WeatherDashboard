@@ -9,25 +9,16 @@ const searchInput: HTMLInputElement = document.getElementById(
 ) as HTMLInputElement;
 const todayContainer = document.querySelector('#today') as HTMLDivElement;
 const forecastContainer = document.querySelector('#forecast') as HTMLDivElement;
-const searchHistoryContainer = document.getElementById(
-  'history'
-) as HTMLDivElement;
-const heading: HTMLHeadingElement = document.getElementById(
-  'search-title'
-) as HTMLHeadingElement;
-const weatherIcon: HTMLImageElement = document.getElementById(
-  'weather-img'
-) as HTMLImageElement;
-const tempEl: HTMLParagraphElement = document.getElementById(
-  'temp'
-) as HTMLParagraphElement;
-const windEl: HTMLParagraphElement = document.getElementById(
-  'wind'
-) as HTMLParagraphElement;
-const humidityEl: HTMLParagraphElement = document.getElementById(
-  'humidity'
-) as HTMLParagraphElement;
+const searchHistoryContainer = document.getElementById('history') as HTMLDivElement;
+const heading: HTMLHeadingElement = document.getElementById('search-title') as HTMLHeadingElement;
+const weatherIcon: HTMLImageElement = document.getElementById('weather-img') as HTMLImageElement;
+const tempEl: HTMLParagraphElement = document.getElementById('temp') as HTMLParagraphElement;
+const windEl: HTMLParagraphElement = document.getElementById('wind') as HTMLParagraphElement;
+const humidityEl: HTMLParagraphElement = document.getElementById('humidity') as HTMLParagraphElement;
 
+if (!searchForm || !searchInput || !todayContainer || !forecastContainer || !searchHistoryContainer || !heading || !weatherIcon || !tempEl || !windEl || !humidityEl) {
+  console.error('One or more DOM elements are missing');
+}
 /*
 
 API Calls
@@ -43,6 +34,10 @@ const fetchWeather = async (cityName: string) => {
     body: JSON.stringify({ cityName }),
   });
 
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  
   const weatherData = await response.json();
 
   console.log('weatherData: ', weatherData);

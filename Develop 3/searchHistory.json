@@ -1,1 +1,14 @@
-[]
+[
+    {
+      "cityName": "New York",
+      "timestamp": "2023-10-01T12:00:00Z"
+    },
+    {
+      "cityName": "Los Angeles",
+      "timestamp": "2023-10-02T15:30:00Z"
+    },
+    {
+      "cityName": "Chicago",
+      "timestamp": "2023-10-03T09:45:00Z"
+    }
+  ]
