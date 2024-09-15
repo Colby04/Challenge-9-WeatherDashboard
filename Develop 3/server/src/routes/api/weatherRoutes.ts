@@ -1,12 +1,10 @@
-const router = express.Router();
-// import HistoryService from '../../service/historyService.js';
-// import WeatherService from '../../service/weatherService.js';
-
 import express from 'express';
 import axios from 'axios';
+//import HistoryService from '../../service/historyService.js';
+//import WeatherService from '../../service/weatherService.js';
 
 const searchHistory: string[] = [];
-
+const router = express.Router();
 // POST Request with city name to retrieve weather data
 router.post('/', async (req: express.Request, res: express.Response) => {
     const { city } = req.body;
@@ -16,7 +14,7 @@ router.post('/', async (req: express.Request, res: express.Response) => {
     }
 
     try {
-        const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+        const apiKey = '9f5a6aa2daa522156cf86b3e7ded068a'; // Replace with your actual API key
         const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
         const weatherData = response.data;
 
@@ -28,7 +26,7 @@ router.post('/', async (req: express.Request, res: express.Response) => {
         res.status(500).json({ error: 'Failed to retrieve weather data' });
     }
 
-    return; // Add a return statement here
+    return ; // Add a return statement here
 });
 
 // GET search history
