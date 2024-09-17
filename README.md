@@ -19,6 +19,9 @@ Enter a city name in the search input field and click the submit button.
 The current weather conditions for the city will be displayed, including: City Name, Date, Weather Icon, Weather Description, Temperature, Humidity, Wind Speed. A five-day weather forecast will also be presented below the current conditions. The searched city will be added to the search history.
 Users can click on any city in the search history to view its current and future weather conditions again.
 
+## Screenshot
+![Weather Dashboard](https://drive.google.com/file/d/1RneaOzx6SRBig7MdWHW_F9Hdf0uVutQU/view?usp=sharing)
+
 ## License
 This project is licensed under the No License license.
 
