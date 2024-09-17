@@ -9,11 +9,11 @@ import fs from 'fs';
 
 // TODO: Define route to serve index.html  
 
-const searchHistoryPath = path.join(__dirname, '/Users/colbyjanel/bootcamp/Challenge-9-WeatherDashboard/Develop 3/searchHistory.json');
+const searchHistoryPath = path.join(__dirname, '../../../client/dist/index.html');
 
 // HTML route to serve index.html
 router.get('*', (_req: Express.Request, res: Express.Response) => {
-    (res as any).sendFile(path.join(__dirname, '/Users/colbyjanel/bootcamp/Challenge-9-WeatherDashboard/Develop 3/client/index.html'));
+    (res as any).sendFile(searchHistoryPath);
 });
 
 // API route to get search history
