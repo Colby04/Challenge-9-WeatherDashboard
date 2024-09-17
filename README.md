@@ -20,7 +20,7 @@ The current weather conditions for the city will be displayed, including: City N
 Users can click on any city in the search history to view its current and future weather conditions again.
 
 ## Screenshot
-![Weather Dashboard](https://drive.google.com/file/d/1RneaOzx6SRBig7MdWHW_F9Hdf0uVutQU/view?usp=sharing)
+![Weather Dashboard](/Users/colbyjanel/Desktop/Challenge 9 SS.png)
 
 ## License
 This project is licensed under the No License license.
